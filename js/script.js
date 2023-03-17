@@ -20,8 +20,8 @@ let ApiCaricamento = async () => {
 
         market2.forEach((article) => {
             const col = document.createElement("div")
-                col.className = "col"
-                col.innerHTML = `<div class="card";>
+                col.className = "col-6"
+                col.innerHTML = `<div class="ms-5 me-5 mb-4 mt-4 card";>
                 <img src="${article.imageUrl}" class="img-fluid card-img-top" alt="${article.name}">
                 <div class="card-body">
                 <h3 class="card-title">
@@ -32,7 +32,8 @@ let ApiCaricamento = async () => {
                 ${article.description}</p>
                 <h5 class="card-text">
                 ${article.price} €</h5>
-                <a href="" class="btn btn-primary">Vedi</a>
+                <button type="button" class="ps-5 pe-5 btn btn-outline-success">Buy</button>
+                <button type="button" class="btn btn-outline-warning">Edit</button>
             </div>`
             linea.appendChild(col);
         })
