@@ -7,7 +7,7 @@ let ApiCaricamento = async () => {
         })
         let market2;
         market2 = await market.json();
-        console.log(ApiCaricamento());
+        console.log(market2);
     }catch(err){
         console.log(err);
     }
