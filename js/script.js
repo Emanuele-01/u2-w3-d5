@@ -8,6 +8,34 @@ let ApiCaricamento = async () => {
         let market2;
         market2 = await market.json();
         console.log(market2);
+
+        let containar = document.querySelector('.containar');
+        containar.innerHTML= ""
+        let linea = document.createElement('div');
+        linea.className = 'row';
+        linea.classList.add('row-cols-4');
+        linea.classList.add('d-flex');
+        linea.classList.add('align-items-end');
+        containar.appendChild(linea);
+
+        market2.forEach((article) => {
+            const col = document.createElement("div")
+                col.className = "col"
+                col.innerHTML = `<div class="card";>
+                <img src="${article.imageUrl}" class="img-fluid card-img-top" alt="${article.name}">
+                <div class="card-body">
+                <h3 class="card-title">
+                ${article.name}</h3>
+                <h5 class="card-title">
+                ${article.brand}</h5>
+                <p class="card-text">
+                ${article.description}</p>
+                <h5 class="card-text">
+                ${article.price} €</h5>
+                <a href="" class="btn btn-primary">Vedi</a>
+            </div>`
+            linea.appendChild(col);
+        })
     }catch(err){
         console.log(err);
     }

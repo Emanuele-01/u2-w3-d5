@@ -1,29 +1,15 @@
 let UserId = Math.floor(Math.random() * 1000);
 
-// let nameU = document.getElementById('nameArticle');
-// let desciption = document.getElementById('Description');
-// let brand = document.getElementById('brand');
-// let imageUrl = document.getElementById('imgUrl');
-// let price = document.getElementById('priceArticle');
 
 const push = async (event) => {
     event.preventDefault();
-    // let newObj = {
-
-    //     name: nameU.value,
-    //     desciption: desciption.value,
-    //     brand: brand.value,
-    //     imageUrl: imageUrl.value,
-    //     price: price.value,
-    //     userId: UserId
-    // };
 
     let newObj = {
         name: document.getElementById('nameArticle').value,
         description: document.getElementById('Description').value,
         brand: document.getElementById('brand').value,
         imageUrl: document.getElementById('imgUrl').value,
-        price: document.getElementById('priceArticle').value + '€' ,
+        price: document.getElementById('priceArticle').value,
         userId: UserId
     }
 
@@ -44,4 +30,3 @@ const push = async (event) => {
         console.log(err);
     }
 }
-push();
