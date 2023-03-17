@@ -6,8 +6,8 @@ let UserId = Math.floor(Math.random() * 1000);
 // let imageUrl = document.getElementById('imgUrl');
 // let price = document.getElementById('priceArticle');
 
-const push = async () => {
-
+const push = async (event) => {
+    event.preventDefault();
     // let newObj = {
 
     //     name: nameU.value,
@@ -20,10 +20,10 @@ const push = async () => {
 
     let newObj = {
         name: document.getElementById('nameArticle').value,
-        desciption: document.getElementById('Description').value,
+        description: document.getElementById('Description').value,
         brand: document.getElementById('brand').value,
         imageUrl: document.getElementById('imgUrl').value,
-        price: document.getElementById('priceArticle').value,
+        price: document.getElementById('priceArticle').value + '€' ,
         userId: UserId
     }
 
