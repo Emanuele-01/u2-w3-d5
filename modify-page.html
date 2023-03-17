@@ -32,7 +32,7 @@
         </header>
         <main>
             <h1 class="d-flex justify-content-center mt-2">Modify Article</h1>
-            <form class="mt-5">
+            <form class="mt-5" onsubmit="push(event)">
                 <input id="imgUrl" class="form-control mb-3" type="text" placeholder="image Article" aria-label="default input example">
                 <input id="Description" class="form-control mb-3" type="text" placeholder="Description" aria-label="default input example">
                 <input id="brand" class="form-control mb-3" type="text" placeholder="Name of Brand" aria-label="default input example">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="d-flex">
                     <div class="mt-5">
-                        <button onclick="push()" type="submit" class="btn btn-success">Push</button>
+                        <button  type="submit" class="btn btn-success">Push</button>
                         <button type="submit" class="btn btn-secondary">Modify</button>
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </div>
